@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Django Girls blog</title>
+        <style>
+a{
+  color:#00a060;
+}
+a:hover{
+  color:springgreen
+}
+p{
+  font-size: 11px;
+  line-height: 11px;
+}
+h2{
+  font-size: 20px;
+}
+        </style>
+    </head>
+    <body>
+    <ul>
+
+    {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+
+    </body>
+</html>
